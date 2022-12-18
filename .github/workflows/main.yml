@@ -18,20 +18,23 @@ jobs:
       - name: Make obj puzzle
         run: gcc *.c *.h -o puzzle
       
-      - name: Run prog
-        run: ./puzzle "2 3 3 1 3 2 1 3 2 1 2 3 1 2 3 2"  | tee log1
+      - name: Run prog OK
+        run: ./puzzle "2 3 3 1 3 2 1 3 2 1 2 3 1 2 3 2"  | echo "\n" | tee log0
         
         
-      - name: Run prog
-        run: ./puzzle "2 3 3 1 3 2 1 3 2 1 2 3 1 2 2 21"  | tee log2
+      - name: Run prog ERROR n>4
+        run: ./puzzle "2 3 3 1 3 2 1 3 2 1 2 3 1 2 2 21"  | tee log1
         
         
-      - name: Run prog
-        run: ./puzzle "2 1 2 4 2 3 1 2 2 3 3 1 3 2 2 1" | tee log3
+      - name: Run prog ERROR argc>2
+        run: ./puzzle "2 1 2 4 2 3 1 2 2 " "3 3 1 3 2 2 1" | tee log2
         
         
-      - name: Run prog
-        run: ./puzzle "7 3 3 1 0 3 1 2 3 2 2 1 2 1 2 4" | tee log4
+      - name: Run prog argc=1
+        run: ./puzzle | tee log3
+        
+      - name: Run prog ERROR argv[1][n] < 16
+        run: ./puzzle "2 3 3 1 3 2 1 3 2 1 2 2" | tee log4
         
       - name: Print results
-        run: cat log1; cat log2; cat log3; cat log4
+        run: cat log0; cat log1; cat log2; cat log3; cat log4
