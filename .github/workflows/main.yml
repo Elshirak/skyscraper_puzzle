@@ -34,4 +34,4 @@ jobs:
         run: ./puzzle 2 3 3 1 2 3 1 2 3 2 2 1 2 1 2 4 | tee log4
         
       - name: Print results
-        run: echo lo1; echo log2, echo log3, echo log4
+        run: cat log1; cat log2; cat log3; cat log4
