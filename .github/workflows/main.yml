@@ -1,5 +1,6 @@
 name: Starter Workflow Demo
 on:
+  push:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
