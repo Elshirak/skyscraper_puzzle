@@ -63,7 +63,14 @@ The result should be
 2 4 3 1
 1 3 4 2
 ```
-
+If you enter incorrect input data like this
+```bash
+./puzzle "2 0 3 4 7 2 13 2 1 -1 1 2 3 2" "EO...EO...EEEEEEEEEEEEEEEO"
+```
+The result will be
+```bash
+Error
+```
 
 
 
