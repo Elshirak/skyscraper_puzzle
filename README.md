@@ -42,6 +42,44 @@ The result of solving the puzzle:
 ```
 ***
 
+# Implementation :mechanic:
+First of all, the task was to create a program that **solves the following problem:**
+
+- Given a map of 4x4, place boxes of height 1 to 4 on each available square in a way that every row and column sees the correct number of boxes from each the possible points of view (left/right for rows, up/down for columns).
+- Each of the views (2 per row and 2 per column) will have a given value. Your program must place the boxes correctly, while making sure each row and column only has one box of each size.
+- Your output will contain the first solution you encounter
+- Here’s how we’ll launch your program : 
+```bash
+> ./rush-01 "col1up col2up col3up col4up col1down col2down col3down col4down row1left row2left
+row3left row4left row1right row2right row3right row4right"
+```
+"col1up" is the value for the left column upper point of view. Each of these represent a characters string of values ranged between ’1’ and ’4’. This is the ONLY acceptable input for your program. Any other input must be considered an error. Here’s an example of intended input/output for a valid set.
+```bash
+./rush-01 "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2" | cat -e
+1 2 3 4$
+2 3 4 1$
+3 4 1 2$
+4 1 2 3$
+```
+In case of error or if you can’t find any solutions, display "Error" followed by a line break.
+
+Also, I had a **requirements on code style** written [here](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf). There are some of them:
+- Each function must be maximum 25 lines, not counting the function’s own curly brackets.
+- Each line must be at most 80 columns wide, comments included.
+- One instruction per line
+
+- A function can take 4 named parameters maximum.
+- You can’t declare more than 5 variables per function.
+- You cannot have more than 5 function-definitions in a .c file
+
+- All includes must be at the beginning of the file.
+- You cannot include a C file.
+- Header files must be protected from double inclusions. If the file is ft_foo.h, its bystander macro is FT_FOO_H.
+- Unused header inclusions (.h) are forbidden
+- You’re not allowed to use: for, do...while, switch, case, goto, ternary operators such as ‘?’.
+
+***
+
 # How to use :hammer_and_wrench:
 
 Clone the repository
@@ -50,7 +88,7 @@ git clone git@github.com:Elshirak/skyscraper_puzzle.git
 ```
 Compile the project, making object file "puzzle"
 ```bash
-gcc *.c *.h -o puzzle
+gcc *.c *.h -Wall -Wextra -Werror -o puzzle
 ```
 Run the program
 ```bash
