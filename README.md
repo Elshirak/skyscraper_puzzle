@@ -64,19 +64,18 @@ row3left row4left row1right row2right row3right row4right"
 In case of error or if you can’t find any solutions, display "Error" followed by a line break.
 
 Also, I had a **requirements on code style** written [here](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf). There are some of them:
-- Each function must be maximum 25 lines, not counting the function’s own curly brackets.
-- Each line must be at most 80 columns wide, comments included.
+- Each function must be maximum 25 lines
+- Each line must be at most 80 columns wide
 - One instruction per line
 
-- A function can take 4 named parameters maximum.
-- You can’t declare more than 5 variables per function.
+- A function can take 4 named parameters maximum
+- You can’t declare more than 5 variables per function
 - You cannot have more than 5 function-definitions in a .c file
 
 - All includes must be at the beginning of the file.
 - You cannot include a C file.
 - Header files must be protected from double inclusions. If the file is ft_foo.h, its bystander macro is FT_FOO_H.
 - Unused header inclusions (.h) are forbidden
-- You’re not allowed to use: for, do...while, switch, case, goto, ternary operators such as ‘?’.
 
 This rules had huge effect on implementation itself. 
 I decompose problem on subtasks:
@@ -84,9 +83,9 @@ I decompose problem on subtasks:
 2) Chek if they fit the conditions, otherwise throw an error
 3) Initialize a matrix 6x6 and fill it with 0
 4) Get non-repeatable strings four symbols each('1', '2', '3', '4'), there are only 4! = 24 different combinations for my task 
-5) Pass a massive of strings to a recursive solver-function, based on brute-force method. It will returns a filled matrix
+5) Pass a massive of strings to a recursive solver-function. It will returns a filled matrix
 6) Check is returned board the right answer. Yes -> print | No -> Continue solving
-7) 
+7) Print result matrix or if there is no solution -> print Error
 ***
 
 # How to use :hammer_and_wrench:
