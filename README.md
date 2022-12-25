@@ -63,7 +63,7 @@ row3left row4left row1right row2right row3right row4right"
 ```
 In case of error or if you can’t find any solutions, display "Error" followed by a line break.
 
-Also, I had a **requirements on code style** written [here](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf). There are some of them:
+I'm allowed to use only _malloc_ and _print_ library functions. Also, I had a **requirements on code style** written [here](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf). There are some of them:
 - Each function must be maximum 25 lines
 - Each line must be at most 80 columns wide
 - One instruction per line
@@ -83,9 +83,11 @@ I decompose problem on subtasks:
 2) Chek if they fit the conditions, otherwise throw an error
 3) Initialize a matrix 6x6 and fill it with 0
 4) Get non-repeatable strings four symbols each('1', '2', '3', '4'), there are only 4! = 24 different combinations for my task 
-5) Pass a massive of strings to a recursive solver-function. It will returns a filled matrix
+5) Pass a massive of strings to a recursive solver-function. It will return a filled matrix
 6) Check is returned board the right answer. Yes -> print | No -> Continue solving
 7) Print result matrix or if there is no solution -> print Error
+
+Vim, gcc
 ***
 
 # How to use :hammer_and_wrench:
