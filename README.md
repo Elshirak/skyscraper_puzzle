@@ -52,7 +52,7 @@ Compile the project, making object file "puzzle"
 ```bash
 gcc *.c *.h -o puzzle
 ```
-Run the program
+Run the program. Also you can change input variables.
 ```bash
 ./puzzle "2 3 3 1 3 2 1 3 2 1 2 3 1 2 3 2"
 ```
@@ -63,6 +63,15 @@ The result should be
 2 4 3 1
 1 3 4 2
 ```
+If you input is incorrect or do not feets whith the rules
+```bash
+./puzzle "2 3 3 0 3 2 -1 3 2 12 3 1 2 3 2" "EO EO EEEEEEEO"
+```
+Result would be just
+```bash
+Error
+```
+
 
 
 
