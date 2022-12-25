@@ -78,6 +78,15 @@ Also, I had a **requirements on code style** written [here](https://github.com/4
 - Unused header inclusions (.h) are forbidden
 - You’re not allowed to use: for, do...while, switch, case, goto, ternary operators such as ‘?’.
 
+This rules had huge effect on implementation itself. 
+I decompose problem on subtasks:
+1) Parse input values
+2) Chek if they fit the conditions, otherwise throw an error
+3) Initialize a matrix 6x6 and fill it with 0
+4) Get non-repeatable strings four symbols each('1', '2', '3', '4'), there are only 4! = 24 different combinations for my task 
+5) Pass a massive of strings to a recursive solver-function, based on brute-force method. It will returns a filled matrix
+6) Check is returned board the right answer. Yes -> print | No -> Continue solving
+7) 
 ***
 
 # How to use :hammer_and_wrench:
