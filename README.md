@@ -87,6 +87,7 @@ I decompose problem on subtasks:
 6) Check is returned board the right answer. Yes -> print | No -> Continue solving
 7) Print result matrix or if there is no solution -> print Error
 
+GCC, Vim
 ***
 
 # How to use :hammer_and_wrench:
