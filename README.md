@@ -50,12 +50,12 @@ First of all, the task was to create a program that **solves the following probl
 - Your output will contain the first solution you encounter
 - Here’s how we’ll launch your program : 
 ```bash
-> ./rush-01 "col1up col2up col3up col4up col1down col2down col3down col4down row1left row2left
+> ./puzzle "col1up col2up col3up col4up col1down col2down col3down col4down row1left row2left
 row3left row4left row1right row2right row3right row4right"
 ```
 "col1up" is the value for the left column upper point of view. Each of these represent a characters string of values ranged between ’1’ and ’4’. This is the ONLY acceptable input for your program. Any other input must be considered an error. Here’s an example of intended input/output for a valid set.
 ```bash
-./rush-01 "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2" | cat -e
+./puzzle "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2" | cat -e
 1 2 3 4$
 2 3 4 1$
 3 4 1 2$
@@ -65,17 +65,14 @@ In case of error or if you can’t find any solutions, display "Error" followed 
 
 I'm allowed to use only _malloc_ and _print_ library functions. Also, I had a **requirements on code style** written [here](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf). There are some of them:
 - Each function must be maximum 25 lines
-- Each line must be at most 80 columns wide
-- One instruction per line
+- Each line must be at most 80 columns wide, one instruction per line
 
 - A function can take 4 named parameters maximum
 - You can’t declare more than 5 variables per function
 - You cannot have more than 5 function-definitions in a .c file
 
-- All includes must be at the beginning of the file.
-- You cannot include a C file.
-- Header files must be protected from double inclusions. If the file is ft_foo.h, its bystander macro is FT_FOO_H.
-- Unused header inclusions (.h) are forbidden
+- All includes must be at the beginning of the file, you cannot include a C file.
+- Header files must be protected from double inclusions. 
 
 This rules had huge effect on implementation itself. 
 I decompose problem on subtasks:
